@@ -1,0 +1,81 @@
+.side-nav {
+  position: fixed;
+  top: 0;
+  background-color: #fff;
+  width: 16.38rem;
+  height: 100%;
+  border-right: 1px solid #ecebf5;
+
+  .card-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.38rem;
+
+    .card {
+      width: 13.81rem;
+      height: 3.75rem;
+      background: #ffffff;
+      border: 1.7px solid #ecebf5;
+      box-sizing: border-box;
+      border-radius: 0.5rem;
+      margin-top: 21px;
+      line-height: 1.25rem;
+
+      .card-text {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        min-width: 100%;
+        min-height: 100%;
+        line-height: 1.2rem;
+
+        .text-style {
+          width: auto;
+          height: auto;
+          margin-top: 10px;
+          font-weight: 400;
+          font-size: 0.75rem;
+          color: #696d8c;
+
+          #Gelion-bold {
+            font-size: 0.88rem;
+            color: #060213;
+          }
+        }
+      }
+    }
+  }
+
+  .nav-list {
+    display: block;
+    height: 1.56em;
+
+    .nav-list-container {
+      display: flex;
+      justify-content: space-around;
+      padding: 20px;
+      width: 14.5em;
+      height: 3.6em;
+      cursor: pointer;
+
+      .list-icon {
+        display: flex;
+        width: 10.19em;
+        height: 1.5em;
+
+        .list-text {
+          margin-left: 1.13em;
+          width: 7.06em;
+          color: #696d8c;
+          font-size: 1em;
+        }
+
+        .image-icon {
+          width: 1.13em;
+          height: 1.13em;
+        }
+      }
+    }
+  }
+}
