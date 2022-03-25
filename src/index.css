@@ -1,10 +1,5 @@
 @font-face {
   font-family: 'Gelion';
-  src: local('Gelion'), url(./fonts/Gelion-Thin.ttf) format('truetype');
+  src: local('Gelion'), url(./fonts/Gelion-Regular.ttf) format('truetype');
 }
 
-h1 {
-  font-family: 'Gelion';
-  font-style: normal;
-  color: grey
-}
