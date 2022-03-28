@@ -1,23 +1,171 @@
 .Graph {
   margin-left: 16.28em;
-  margin-top: 16em;
+  margin-top: 15em;
   width: 73.63em;
   height: 100vh;
 
   .Graph-component {
-    width: 63.63em;
-    height: 16.63em;
+    width: 64.83em;
+    height: 18.63em;
     border-radius: 0.63em;
-    border: 1px solid #ecebf5;
+    border: 0.13em solid #ecebf5;
     box-sizing: border-box;
-    margin: 0.75em 2.5em;
+    // margin: 0.75em 2.5em;
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    margin: 0em 1.5em;
 
     .line-chart {
       width: 48em;
+
+      .graph-heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 47.82em;
+        height: 2.38em;
+        margin: 0em 0.99em;
+        padding-top: 0.25em;
+        padding-bottom: 0.25em;
+        margin-top: 38px;
+
+        .graph-heading-text {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 1.75em;
+          width: 16.81em;
+
+          .graph-text {
+            width: 11.44em;
+            height: 1.63em;
+            font-size: 1.13rem;
+            font-weight: 600;
+          }
+
+          .graph-percentage {
+            width: 4.38em;
+            height: 1.75em;
+            font-size: 1.13rem;
+            border-radius: 0.63;
+            background-color: rgba(37, 187, 135, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #25bb87;
+          }
+        }
+
+        .graph-header-content {
+          width: 17em;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          .graph-priority {
+            font-size: 0.88em;
+            line-height: 1.38em;
+            width: 6.2em;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .rectangle {
+              width: 0.63em;
+              height: 0.63em;
+              background-color: #f05d23;
+              border-radius: 0.13em;
+              border: none;
+              cursor: pointer;
+            }
+          }
+
+          .graph-date-picker {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width: 9.25em;
+            height: 2.38em;
+            border-radius: 0.63em;
+            border: 1px solid #e1e1eb;
+            box-sizing: border-box;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+
+    .Graph-aside {
+      width: 14.63em;
+      height: 18.58em;
+      border-left: 0.13em solid #ecebf5;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .card-1 {
+        width: 10.69em;
+        height: 116px;
+        border-radius: 10px;
+        font-size: 1.13rem;
+        display: flex;
+        flex-flow: column;
+        border: 0.06em solid #ecebf5;
+        background-color: #fafafa;
+        margin-top: 0px;
+        padding: 20px;
+
+        .card-title {
+          width: 10.81em;
+          height: 1.38em;
+          font-size: 0.88rem;
+          color: #696d8c;
+          font-weight: 400;
+          margin-top: 10px;
+        }
+
+        .time {
+          width: auto !important;
+          height: 2em;
+          font-size: 1.25em;
+          font-weight: 600;
+          margin-top: 8px;
+        }
+      }
+      .card-2 {
+        width: 10.69em;
+        height: 116px;
+        border-radius: 10px;
+        font-size: 1.13rem;
+        display: flex;
+        flex-flow: column;
+        border: 0.06em solid #ecebf5;
+        background-color: #fafafa;
+        margin-top: 15px;
+        padding: 20px;
+
+        .card-title {
+          width: 9.81em;
+          height: 1.38em;
+          font-size: 0.88rem;
+          color: #696d8c;
+          font-weight: 400;
+          margin-top: 10px;
+        }
+
+        .time {
+          width: auto !important;
+          height: 2em;
+          font-size: 1.25em;
+          font-weight: 600;
+          margin-top: 8px;
+        }
+      }
     }
   }
 }
