@@ -1,7 +1,8 @@
 import React from "react";
-import Chart from "react-apexcharts";
 import { ApexOptions } from "apexcharts";
 import ReactApexChart from "react-apexcharts";
+import Dateicon from "../../../assests/sharedicons/dateicon.svg";
+import LineDivider from "../../../assests/sharedicons/Linedivider.svg";
 
 interface SeriesTypes {
   name: string;
@@ -10,8 +11,74 @@ interface SeriesTypes {
 
 const Linegraph = () => {
   const options: ApexOptions = {
+    annotations: {
+      points: [
+        {
+          x: "Feb",
+          y: 18,
+          marker: {
+            size: 6,
+            fillColor: "#fff",
+            strokeColor: "#F05D23",
+            strokeWidth: 1,
+            radius: 2,
+            shape: "circle",
+          },
+        },
+        {
+          x: "Mar",
+          y: 48,
+          marker: {
+            size: 6,
+            fillColor: "#fff",
+            strokeColor: "#F05D23",
+            strokeWidth: 1,
+            radius: 2,
+            shape: "circle",
+          },
+        },
+        {
+          x: "Apr",
+          y: 18,
+          marker: {
+            size: 6,
+            fillColor: "#fff",
+            strokeColor: "#F05D23",
+            strokeWidth: 1,
+            radius: 2,
+            shape: "circle",
+          },
+        },
+        {
+          x: "Jul",
+          y: 42,
+          marker: {
+            size: 6,
+            fillColor: "#fff",
+            strokeColor: "#F05D23",
+            strokeWidth: 1,
+            radius: 2,
+            shape: "circle",
+          },
+        },
+        {
+          x: "Aug",
+          y: 32,
+          marker: {
+            size: 6,
+            fillColor: "#fff",
+            strokeColor: "#F05D23",
+            strokeWidth: 1,
+            radius: 2,
+            shape: "circle",
+          },
+        },
+      ],
+    },
     chart: {
       id: "apexchart-example",
+      width: "100%",
+      height: 350,
       zoom: {
         enabled: false,
       },
@@ -22,7 +89,10 @@ const Linegraph = () => {
     xaxis: {
       categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"],
       max: 8,
-      position: 'bottom',
+      // min: 8,
+      position: "bottom",
+      offsetY: 10,
+      offsetX: -1,
       labels: {
         show: true,
         style: {
@@ -39,13 +109,20 @@ const Linegraph = () => {
           fontSize: "0.88rem",
           fontFamily: "Gelion",
           fontWeight: 400,
+          cssClass: "apexcharts-xaxis-label",
         },
+      },
+      axisBorder: {
+        show: false,
+      },
+      axisTicks: {
+        show: false,
       },
     },
     yaxis: {
       show: true,
       labels: {
-        maxWidth: 160,
+        show: true,
         style: {
           colors: [
             "#696D8C",
@@ -60,7 +137,10 @@ const Linegraph = () => {
           fontSize: "0.88rem",
           fontFamily: "Gelion",
           fontWeight: 400,
+          cssClass: "apexcharts-yaxis-label",
         },
+        offsetX: -10,
+        offsetY: 3,
       },
     },
     stroke: {
@@ -68,13 +148,6 @@ const Linegraph = () => {
       width: 2,
       colors: ["#F05D23"],
     },
-    // markers: {
-    //   colors: "#fff",
-    //   strokeColors: "#F05D23",
-    //   strokeWidth: 1,
-    //   size: 6,
-    //   shape: "circle",
-    // },
   };
   const series: Array<SeriesTypes> = [
     {
@@ -91,19 +164,25 @@ const Linegraph = () => {
             <div className="graph-percentage">+4.14%</div>
           </div>
           <div className="graph-header-content">
-            <div className="graph-priority">
+            <li className="graph-priority">
               <button className="rectangle" />
               High Priority
+            </li>
+            <img src={LineDivider} alt="line divider" />
+            <div className="graph-date-picker">
+              <li style={{ fontWeight: 400 }}>This Month</li>
+              <img src={Dateicon} alt="dateicon" />
             </div>
-            <div className="graph-date-picker">This Month</div>
           </div>
         </div>
-        <ReactApexChart
-          options={options}
-          series={series}
-          height={220}
-          width={799}
-        />{" "}
+        <div className="react-apex-chart">
+          <ReactApexChart
+            options={options}
+            series={series}
+            height={225}
+            width={790}
+          />{" "}
+        </div>
       </div>
       <div className="Graph-aside">
         <div className="card-1">

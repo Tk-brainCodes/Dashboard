@@ -1,5 +1,5 @@
 import React from "react";
-import "./Graph.styles.scss";
+import "../../styles/components/_graph.styles.scss";
 import Linegraph from "./Linegraph/linegraph";
 
 const Graph = () => {

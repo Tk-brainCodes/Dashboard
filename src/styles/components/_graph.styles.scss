@@ -8,9 +8,8 @@
     width: 64.83em;
     height: 18.63em;
     border-radius: 0.63em;
-    border: 0.13em solid #ecebf5;
+    border: 0.06em solid #ecebf5;
     box-sizing: border-box;
-    // margin: 0.75em 2.5em;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -19,6 +18,10 @@
 
     .line-chart {
       width: 48em;
+
+      .react-apex-chart {
+        margin: 0em 0.67em;
+      }
 
       .graph-heading {
         display: flex;
@@ -29,7 +32,7 @@
         margin: 0em 0.99em;
         padding-top: 0.25em;
         padding-bottom: 0.25em;
-        margin-top: 38px;
+        margin-top: 15px;
 
         .graph-heading-text {
           display: flex;
@@ -68,10 +71,11 @@
             font-size: 0.88em;
             line-height: 1.38em;
             width: 6.2em;
-            font-weight: 600;
+            font-weight: 400;
             display: flex;
             align-items: center;
             justify-content: space-between;
+            color: black;
 
             .rectangle {
               width: 0.63em;
@@ -86,14 +90,15 @@
           .graph-date-picker {
             display: flex;
             flex-direction: row;
-            justify-content: center;
+            justify-content: space-around;
             align-items: center;
             width: 9.25em;
             height: 2.38em;
             border-radius: 0.63em;
             border: 1px solid #e1e1eb;
             box-sizing: border-box;
-            font-weight: 600;
+            font-weight: 400;
+            color: black;
           }
         }
       }
@@ -102,7 +107,7 @@
     .Graph-aside {
       width: 14.63em;
       height: 18.58em;
-      border-left: 0.13em solid #ecebf5;
+      border-left: 0.06em solid #ecebf5;
       display: flex;
       flex-direction: column;
       align-items: center;

@@ -1,8 +1,8 @@
-import Admin from "../../assest/Admin.svg";
-import HelpCenter from "../../assest/HelpCenter.svg";
-import Analytic from "../../assest/Analytic.svg";
-import Knowledgebase from "../../assest/Knowledgebase.svg";
-import Agentinbox from "../../assest/Agentinbox.svg";
+import Admin from "../../assests/navicons/Admin.svg";
+import HelpCenter from "../../assests/navicons/HelpCenter.svg";
+import Analytic from "../../assests/navicons/Analytic.svg";
+import Knowledgebase from "../../assests/navicons/Knowledgebase.svg";
+import Agentinbox from "../../assests/navicons/Agentinbox.svg";
 
 export const MENU_DATA = [
   {

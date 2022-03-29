@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { MENU_DATA } from "./menudata";
-import ArrowRight from "../../assest/arrowright.svg";
-import "./Sidenav.styles.scss";
+import ArrowRight from "../../assests/navicons/arrowright.svg";
+import "../../styles/layouts/_sidenav.styles.scss";
 
 const Sidenav = () => {
   const [data, setData] =
