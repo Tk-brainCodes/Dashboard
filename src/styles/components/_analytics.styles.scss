@@ -1,0 +1,166 @@
+.Header {
+  width: 82vw;
+  height: 14.31em;
+  margin-left: 15.4em;
+  position: fixed;
+  z-index: 20;
+  background-color: #ffff;
+  top: 0;
+
+  .Header-container {
+    height: 8.56em;
+    border-bottom: 1px solid #ecebf5;
+
+    .tab {
+      .tab-list {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 27em;
+        height: 3.2em;
+        margin: 0.75em 2.5em;
+
+        li {
+          width: auto !important;
+          height: 2.63em;
+          cursor: pointer;
+          font-size: 1rem;
+          line-height: 1.5em;
+          color: #696d8c;
+          font-weight: 400;
+          white-space: 1rem;
+
+          &:hover {
+            border-bottom: 0.15em solid #6837ef;
+            color: #060213;
+            font-weight: 600;
+          }
+        }
+        .active {
+          border-bottom: 0.15em solid #6837ef;
+          color: #060213;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  .sub-header {
+    height: 2.63em;
+    margin-top: 5.94em;
+  }
+
+  .Description {
+    width: 65.63em;
+    height: 2.75em;
+    margin: 2em 2.37em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .Description-title {
+      width: auto !important;
+      font-size: 1.5rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    .Description-field {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      width: 41.94em;
+      height: inherit;
+
+      .search-container {
+        width: 20.88em;
+        height: 2.75em;
+        background: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        border: 1px solid #e1e1eb;
+        border-radius: 0.5em;
+        margin: 2em 0em;
+
+        #des-search {
+          width: 1em;
+          height: 1em;
+          margin: 0em 1.5em;
+        }
+
+        #search-analytics {
+          outline: none;
+          border: none;
+          height: 2em;
+          width: 20em;
+          font-size: 1rem;
+          color: #a3a3c2;
+        }
+        ::placeholder {
+          font-size: 1rem;
+          color: #a3a3c2;
+        }
+      }
+
+      .DropDownContainer {
+        width: 10em;
+        height: auto !important;
+
+        .DropDownHeader {
+          width: 10em;
+          height: 2.75em;
+          border-radius: 0.5em;
+          border: 1px solid #e1e1eb;
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          flex-wrap: nowrap;
+          font-weight: 600;
+        }
+
+        .DropDownListContainer {
+          position: absolute;
+          padding: 0;
+          margin-top: 0.3em;
+          width: 10em;
+          padding-left: 1em;
+          padding: 10px;
+          background: #ffffff;
+          border: 2px solid #e5e5e5;
+          border-radius: 0.5em;
+          box-sizing: border-box;
+          color: black;
+          font-size: 1rem;
+          font-weight: 600;
+          &:first-child {
+            padding-top: 0.8em;
+          }
+
+          ul {
+            margin: 5px;
+
+            li {
+              cursor: pointer;
+              &:hover {
+                color: #25bb87;
+              }
+            }
+          }
+        }
+      }
+      #export-button {
+        padding: 0.6em 1.6em;
+        border-radius: 0.5em;
+        background: #25bb87;
+        color: white;
+        border: none;
+        cursor: pointer;
+        line-height: 1.5em;
+        font-size: 1rem;
+        font-weight: 600;
+      }
+    }
+  }
+}

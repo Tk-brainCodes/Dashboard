@@ -1,12 +1,13 @@
 import React from "react";
-import Header from "../Analytic/Analytic.component";
+import Analytics from "../Analytic/Analytic.component";
 import Sidenav from "../../components/Sidenav/Sidenav.component";
 
 const Dashboard = () => {
   return (
     <div className="Dashboard">
+      {/*Routing takes place here*/}
       <Sidenav />
-      <Header />
+      <Analytics />
     </div>
   );
 };
