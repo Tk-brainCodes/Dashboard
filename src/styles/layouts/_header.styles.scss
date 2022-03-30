@@ -207,6 +207,7 @@
 
       .DropDownContainer {
         width: 10em;
+        height: auto !important;
 
         .DropDownHeader {
           width: 10em;
@@ -216,11 +217,38 @@
           display: flex;
           align-items: center;
           justify-content: space-around;
+          flex-wrap: nowrap;
           font-weight: 600;
         }
 
         .DropDownListContainer {
-          display: none;
+          position: absolute;
+          padding: 0;
+          margin-top: 0.3em;
+          width: 10em;
+          padding-left: 1em;
+          padding: 10px;
+          background: #ffffff;
+          border: 2px solid #e5e5e5;
+          border-radius: 0.5em;
+          box-sizing: border-box;
+          color: black;
+          font-size: 1rem;
+          font-weight: 600;
+          &:first-child {
+            padding-top: 0.8em;
+          }
+
+          ul {
+            margin: 5px;
+
+            li {
+              cursor: pointer;
+              &:hover {
+                color: #25bb87;
+              }
+            }
+          }
         }
       }
       #export-button {

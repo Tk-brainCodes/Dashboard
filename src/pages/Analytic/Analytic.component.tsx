@@ -1,18 +1,29 @@
 import React, { useState, useEffect } from "react";
-import Graph from "../Graph/Graph.component";
+import Graph from "../../components/Graph/Graph.component";
 import { TabsDetailData } from "./Tabdata";
 import Iconsearch from "../../assests/sharedicons/icon-search.svg";
 import Dropdownblack from "../../assests/sharedicons/dropdown-black.svg";
+import Userdropdown from "../../assests/sharedicons/userdropdown.svg";
 import Notificationicon from "../../assests/sharedicons/notification.svg";
 import Linedivider from "../../assests/sharedicons/Linedivider.svg";
 import "../../styles/layouts/_header.styles.scss";
 
 const Header = () => {
+  const options = ["Highest", "Lowest", "Average"];
   const [activeTab, setActiveTab] = useState<string>("tab1");
+  const [isOpen, setIsOpen] = useState<Boolean>(false);
+  const [selectedOption, setSelectedOption] = useState<null | string | number>(
+    null
+  );
 
   useEffect(() => {
     setActiveTab(activeTab);
   }, [activeTab]);
+
+  const onOptionClicked = (value: number | string) => (): void => {
+    setSelectedOption(value);
+    setIsOpen(false);
+  };
 
   return (
     <>
@@ -39,7 +50,7 @@ const Header = () => {
               <div className="authentication">
                 <div className="user-image" />
                 <div className="icon-container">
-                  <img src={Dropdownblack} alt="dropdown" />
+                  <img src={Userdropdown} alt="dropdown" />
                 </div>
               </div>
             </div>
@@ -77,16 +88,22 @@ const Header = () => {
               />
             </div>
             <div className="DropDownContainer">
-              <div className="DropDownHeader">
-                Filter Options <img src={Dropdownblack} alt="dropdown-icon" />{" "}
+              <div
+                className="DropDownHeader"
+                onClick={() => setIsOpen(!isOpen)}
+              >
+                {selectedOption || "Filter Options"}
+                <img src={Dropdownblack} alt="dropdown-icon" />
               </div>
-              <div className="DropDownListContainer">
-                <ul>
-                  <li>Mangoes</li>
-                  <li>Apples</li>
-                  <li>Oranges</li>
-                </ul>
-              </div>
+              {isOpen && (
+                <div className="DropDownListContainer">
+                  {options.map((option) => (
+                    <ul key={Math.random()}>
+                      <li onClick={onOptionClicked(option)}>{option}</li>
+                    </ul>
+                  ))}
+                </div>
+              )}
             </div>
             <img src={Linedivider} alt="divider" />
             <button name="export" id="export-button">

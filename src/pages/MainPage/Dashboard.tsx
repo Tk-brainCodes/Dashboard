@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "../../components/Header/Header.component";
+import Header from "../Analytic/Analytic.component";
 import Sidenav from "../../components/Sidenav/Sidenav.component";
 
 const Dashboard = () => {
