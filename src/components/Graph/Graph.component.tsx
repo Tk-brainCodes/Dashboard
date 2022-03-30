@@ -7,9 +7,7 @@ const Graph = () => {
     <>
       {/*Make through json data and render all three components*/}
       <div className="Graph">
-        <div className="Graph-component">
-          <Linegraph />
-        </div>
+        <Linegraph />
       </div>
     </>
   );
