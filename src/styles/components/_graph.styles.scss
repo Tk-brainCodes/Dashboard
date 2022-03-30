@@ -14,7 +14,7 @@
     align-items: center;
     justify-content: space-between;
     flex-wrap: nowrap;
-    margin: 0em 1.5em;
+    margin: 1.5em 1.5em;
 
     .line-chart {
       width: 48em;
@@ -35,29 +35,31 @@
         margin-top: 15px;
 
         .graph-heading-text {
-          display: flex;
-          align-items: center;
-          justify-content: center;
           height: 1.75em;
-          width: 16.81em;
+          width: 18.94em;
 
           .graph-text {
-            width: 11.44em;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            width: 18.3em;
             height: 1.63em;
             font-size: 1.13rem;
-            font-weight: 600;
+            // border: 1px solid black;
+            margin-left: 0.2em;
           }
 
           .graph-percentage {
-            width: 4.38em;
-            height: 1.75em;
-            font-size: 1.13rem;
+            width: 4.20em;
+            height: 1.4em;
+            font-size: 0.99rem;
             border-radius: 0.63;
             background-color: rgba(37, 187, 135, 0.1);
             display: flex;
             align-items: center;
             justify-content: center;
             color: #25bb87;
+            margin-left: 0.8em;
           }
         }
 
@@ -69,22 +71,13 @@
 
           .graph-priority {
             font-size: 0.88em;
-            line-height: 1.38em;
             width: 6.2em;
-            font-weight: 400;
+            height: 1.78em;
+            font-weight: 600;
             display: flex;
             align-items: center;
             justify-content: space-between;
             color: black;
-
-            .rectangle {
-              width: 0.63em;
-              height: 0.63em;
-              background-color: #f05d23;
-              border-radius: 0.13em;
-              border: none;
-              cursor: pointer;
-            }
           }
 
           .graph-date-picker {
