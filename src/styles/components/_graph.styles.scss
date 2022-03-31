@@ -1,11 +1,22 @@
+$breakpoint-tablet: 1024px;
+
 .Graph {
   margin-left: 16.28em;
   margin-top: 15em;
   width: 73.63em;
   height: 100vh;
 
+  @media (max-width: $breakpoint-tablet) {
+    margin: 0;
+    margin-top: 17em;
+
+    .Graph-component {
+      width: 100%;
+    }
+  }
+
   .Graph-component {
-    width: 64.83em;
+    width: 65.58em;
     height: 18.63em;
     border-radius: 0.63em;
     border: 0.06em solid #ecebf5;
@@ -14,7 +25,7 @@
     align-items: center;
     justify-content: space-between;
     flex-wrap: nowrap;
-    margin: 1.5em 1.5em;
+    margin: 1.5em 1em;
 
     .line-chart {
       width: 48em;

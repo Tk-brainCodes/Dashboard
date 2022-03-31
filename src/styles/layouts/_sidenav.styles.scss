@@ -1,22 +1,31 @@
+$breakpoint-tablet: 1024px;
+$main-color: #fff;
+
 .side-nav {
   position: fixed;
   top: 0;
-  background-color: #fff;
-  width: 18vw;
-  height: 100%;
+  left: 0;
+  background-color: $main-color;
+  width: auto !important;
+  height: 100vh;
   border-right: 0.06em solid #ecebf5;
-  display: block;
+
+  @media (max-width: $breakpoint-tablet) {
+    display: none;
+  }
 
   .card-container {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 1rem;
+    // border: 1px solid black;
+    width: 15em;
 
     .card {
-      width: 13.81rem;
+      width: 12.81rem;
       height: 3.75rem;
-      background: #ffffff;
+      background: $main-color;
       border: 0.06em solid #ecebf5;
       box-sizing: border-box;
       border-radius: 0.5rem;
@@ -50,40 +59,46 @@
     display: block;
     height: 1.56em;
 
-    .drop-down-container {
-      display: none;
-    }
-
-    .nav-list-container {
-      display: flex;
-      align-items: center;
-      flex-direction: flex-start;
-      padding: 20px;
-      width: auto;
-      height: 1.56em;
-      margin-bottom: 1em;
-      cursor: pointer;
-      font-size: 1rem;
-
-      .list-dropdown {
-        margin-left: 0.7em;
+    .nav {
+      .drop-down-container {
+        display: none;
       }
 
-      .list-icon {
+      .nav-list-container {
         display: flex;
-        width: 10.19em;
-        height: 1.5em;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 20px;
+        width: 13.8em;
+        height: 1.56em;
+        margin-bottom: 0.88em;
+        cursor: pointer;
+        font-size: 1rem;
 
-        .list-text {
-          margin-left: 1.13em;
-          width: 7.06em;
-          color: #696d8c;
-          font-size: 1em;
+        .list-dropdown {
+          margin-left: 0.7em;
         }
 
-        .image-icon {
-          width: 1.13em;
-          height: 1.13em;
+        .list-icon {
+          display: flex;
+          width: 10.19em;
+          height: 1.5em;
+
+          .list-text {
+            margin-left: 1.13em;
+            width: 7.06em;
+            color: #696d8c;
+            font-size: 1em;
+
+            &:hover {
+              color: #6837ef;
+            }
+          }
+
+          .image-icon {
+            width: 1.13em;
+            height: 1.13em;
+          }
         }
       }
     }

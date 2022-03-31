@@ -18,7 +18,7 @@ const Sidenav = () => {
       <div className="menu-list">
         <div className="nav-list">
           {MENU_DATA.map((list) => (
-            <>
+            <div className="nav">
               <div key={list.id} className="nav-list-container">
                 <div className="list-icon">
                   <img className="image-icon" src={list.icon} alt="icon" />
@@ -35,7 +35,7 @@ const Sidenav = () => {
                   </ul>
                 </div>
               ))}
-            </>
+            </div>
           ))}
         </div>
       </div>

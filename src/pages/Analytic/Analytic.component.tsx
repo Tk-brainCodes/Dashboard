@@ -52,32 +52,34 @@ const Analytic = () => {
             ))}
           </div>
           <div className="Description-field">
-            <div className="search-container">
-              <img id="des-search" src={Iconsearch} alt="icon search" />
-              <input
-                id="search-analytics"
-                type="search"
-                name="search"
-                placeholder="Search"
-              />
-            </div>
-            <div className="DropDownContainer">
-              <div
-                className="DropDownHeader"
-                onClick={() => setIsOpen(!isOpen)}
-              >
-                {selectedOption || "Filter Options"}
-                <img src={Dropdownblack} alt="dropdown-icon" />
+            <div className="Description-field-content">
+              <div className="search-container">
+                <img id="des-search" src={Iconsearch} alt="icon search" />
+                <input
+                  id="search-analytics"
+                  type="search"
+                  name="search"
+                  placeholder="Search"
+                />
               </div>
-              {isOpen && (
-                <div className="DropDownListContainer">
-                  {options.map((option) => (
-                    <ul key={Math.random()}>
-                      <li onClick={onOptionClicked(option)}>{option}</li>
-                    </ul>
-                  ))}
+              <div className="DropDownContainer">
+                <div
+                  className="DropDownHeader"
+                  onClick={() => setIsOpen(!isOpen)}
+                >
+                  {selectedOption || "Filter Options"}
+                  <img src={Dropdownblack} alt="dropdown-icon" />
                 </div>
-              )}
+                {isOpen && (
+                  <div className="DropDownListContainer">
+                    {options.map((option) => (
+                      <ul key={Math.random()}>
+                        <li onClick={onOptionClicked(option)}>{option}</li>
+                      </ul>
+                    ))}
+                  </div>
+                )}
+              </div>
             </div>
             <img src={Linedivider} alt="divider" />
             <button name="export" id="export-button">
