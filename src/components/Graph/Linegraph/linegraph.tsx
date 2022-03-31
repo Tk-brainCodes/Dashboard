@@ -20,22 +20,24 @@ const Linegraph = () => {
               </div>
               <div className="graph-header-content">
                 <li className="graph-priority">
-                  <button
+                  <div
                     className="rectangle"
                     style={{
                       backgroundColor: `${option.color}`,
-                      width: " 0.68em",
-                      height: " 0.72em",
+                      width: " 0.63em",
+                      height: " 0.63em",
                       borderRadius: "0.13em",
-                      border: "none",
                       cursor: "pointer",
+                      border: `0.06em solid ${option.color}`,
                     }}
                   />
                   High Priority
                 </li>
                 <img src={LineDivider} alt="line divider" />
                 <div className="graph-date-picker">
-                  <li style={{ fontWeight: 400 }}>This Month</li>
+                  <li>
+                    <b>This Month</b>
+                  </li>
                   <img src={Dateicon} alt="dateicon" />
                 </div>
               </div>
