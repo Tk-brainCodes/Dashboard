@@ -2,10 +2,9 @@ import React from "react";
 import "../../styles/components/_graph.styles.scss";
 import Linegraph from "./Linegraph/linegraph";
 
-const Graph = () => {
+const Graph: React.FC = () => {
   return (
     <>
-      {/*Make through json data and render all three components*/}
       <div className="Graph">
         <Linegraph />
       </div>

@@ -7,7 +7,7 @@ import Dropdownblack from "../../assests/sharedicons/dropdown-black.svg";
 import Linedivider from "../../assests/sharedicons/Linedivider.svg";
 import "../../styles/components/_analytics.styles.scss";
 
-const Analytic = () => {
+const Analytic: React.FC = () => {
   const options = ["Highest", "Lowest", "Average"];
   const [activeTab, setActiveTab] = useState<string>("tab1");
   const [isOpen, setIsOpen] = useState<Boolean>(false);
@@ -19,7 +19,7 @@ const Analytic = () => {
     setActiveTab(activeTab);
   }, [activeTab]);
 
-  const onOptionClicked = (value: number | string) => (): void => {
+  const onOptionClicked = (value: number | string | null) => (): void => {
     setSelectedOption(value);
     setIsOpen(false);
   };

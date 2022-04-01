@@ -5,7 +5,7 @@ import Dateicon from "../../../assests/sharedicons/dateicon.svg";
 import LineDivider from "../../../assests/sharedicons/Linedivider.svg";
 import { LINE_GRAPH_DATA } from "./Linegraph.data";
 
-const Linegraph = () => {
+const Linegraph: React.FC = () => {
   return (
     <>
       {LINE_GRAPH_DATA.map((option, id) => (

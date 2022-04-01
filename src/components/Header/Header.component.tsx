@@ -3,9 +3,9 @@ import Userdropdown from "../../assests/sharedicons/userdropdown.svg";
 import Notificationicon from "../../assests/sharedicons/notification.svg";
 import Iconsearch from "../../assests/sharedicons/icon-search.svg";
 import Linedivider from "../../assests/sharedicons/Linedivider.svg";
-import '../../styles/layouts/_header.styles.scss';
+import "../../styles/layouts/_header.styles.scss";
 
-const Header = () => {
+const Header: React.FC = () => {
   return (
     <div className="top-header">
       <div className="Search-bar">
