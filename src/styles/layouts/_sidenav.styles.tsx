@@ -1,14 +1,5 @@
 import styled from "styled-components";
 
-export const SideNav = styled.div`
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: $main-color;
-  width: auto !important;
-  height: 100vh;
-  border-right: 0.06em solid #ecebf5;
-`;
 export const CardContainer = styled.div`
   display: flex;
   align-items: center;

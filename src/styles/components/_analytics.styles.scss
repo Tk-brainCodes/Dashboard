@@ -16,9 +16,6 @@ $breakpoint-tablet: 1024px;
     box-sizing: border-box;
     height: 16em;
 
-    .Header-container {
-      width: 100vw;
-    }
     .Description {
       width: 100%;
       flex-direction: column;
@@ -167,6 +164,7 @@ $breakpoint-tablet: 1024px;
   .Header-container {
     height: 8.56em;
     border-bottom: 1px solid #ecebf5;
+    display: block;
 
     .tab {
       .tab-list {

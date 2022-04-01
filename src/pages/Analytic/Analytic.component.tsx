@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Graph from "../../components/Graph/Graph.component";
-import Header from "../../components/Header/Header.component";
+import Nav from "../../components/Nav/Nav.component";
 import { TabsDetailData } from "./Tabdata";
 import Iconsearch from "../../assests/sharedicons/icon-search.svg";
 import Dropdownblack from "../../assests/sharedicons/dropdown-black.svg";
@@ -28,7 +28,7 @@ const Analytic: React.FC = () => {
     <>
       <div className="Header">
         <div className="Header-container">
-          <Header />
+          <Nav />
           <div className="tab">
             <ul className="tab-list">
               {TabsDetailData.map((data) => (
