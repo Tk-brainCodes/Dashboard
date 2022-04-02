@@ -3,9 +3,9 @@ import Userdropdown from "../../assests/sharedicons/userdropdown.svg";
 import Notificationicon from "../../assests/sharedicons/notification.svg";
 import Iconsearch from "../../assests/sharedicons/icon-search.svg";
 import Linedivider from "../../assests/sharedicons/Linedivider.svg";
-import ArrowRight from "../../assests/navicons/arrowright.svg";
 import "../../styles/layouts/_nav.styles.scss";
 import { MENU_DATA } from "./menudata";
+import Subnav from "./Subnav/subnav";
 import styled from "styled-components";
 import {
   CardContainer,
@@ -13,14 +13,6 @@ import {
   CardText,
   TextStyle,
   NavList,
-  NavListContainer,
-  ListIcon,
-  ImageIcon,
-  ListText,
-  ListDropdown,
-  DropDownContainer,
-  UL,
-  LI,
 } from "../../styles/layouts/_sidenav.styles";
 
 const Open = styled.div`
@@ -43,11 +35,11 @@ const SideNav = styled.div<any>`
 
   @media (max-width: 1024px) {
     left: ${({ navBar }) => (navBar ? "0" : "-100%")};
+    transition: 300ms;
   }
 `;
 
 const Nav: React.FC = () => {
-  const [isOpen, setIsOpen] = useState<Boolean>(false);
   const [navBar, setNavBar] = useState<Boolean>(false);
 
   return (
@@ -65,33 +57,8 @@ const Nav: React.FC = () => {
           </Card>
         </CardContainer>
         <NavList>
-          {MENU_DATA.map((list) => (
-            <>
-              <NavListContainer key={list.id}>
-                <ListIcon onClick={() => setIsOpen(!isOpen)}>
-                  <ImageIcon src={list.icon} alt="icon" />
-                  <ListText>{list.name}</ListText>
-                </ListIcon>
-                <ListDropdown>
-                  <img src={ArrowRight} alt="arrow-dropdown" />
-                </ListDropdown>
-              </NavListContainer>
-              {list.items
-                .filter((items) => items.id)
-                .map((item) => (
-                  <>
-                    {isOpen ? (
-                      <DropDownContainer key={item.id}>
-                        <UL>
-                          <LI>{item.name}</LI>
-                        </UL>
-                      </DropDownContainer>
-                    ) : (
-                      ""
-                    )}
-                  </>
-                ))}
-            </>
+          {MENU_DATA.map((item, index) => (
+            <Subnav item={item} key={index} />
           ))}
         </NavList>
       </SideNav>
