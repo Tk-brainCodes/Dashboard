@@ -20,7 +20,7 @@ const Subnav = ({ item }: any) => {
     <>
       <NavListContainer onClick={showSidenav}>
         <ListIcon>
-          <ImageIcon src={item.icon} alt="icon" />
+          <ImageIcon src={subnav ? item.iconFilled : item.icon} alt="icon" />
           <ListText style={{ color: `${subnav ? ` #6837ef` : "#696d8c"}` }}>
             {item.name}
           </ListText>

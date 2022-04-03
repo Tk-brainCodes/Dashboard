@@ -182,3 +182,16 @@ export const IconContainer = styled.div`
   justify-content: space-evenly;
   color: #696d8c;
 `;
+
+export const HeaderAuthDropdown = styled.div`
+  width: 10.94em;
+  height: 5.38em;
+  background: white;
+  margin-top: 20em;
+`;
+export const HeaderAuthContainer = styled.div`
+  display: block;
+  with: auto !important;
+  height: auto !important;
+  // margin-top: 10em;
+`

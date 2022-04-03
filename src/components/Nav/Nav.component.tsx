@@ -22,6 +22,8 @@ import {
   Authentication,
   UserImage,
   IconContainer,
+  HeaderAuthDropdown,
+  HeaderAuthContainer,
 } from "../../styles/layouts/_sidenav.styles";
 
 const Open = styled.div`
@@ -52,45 +54,49 @@ const Nav: React.FC = () => {
   const [navBar, setNavBar] = useState<Boolean>(false);
 
   return (
-    <TopHeader>
-      <Open onClick={() => setNavBar(!navBar)}>open</Open>
-      <SideNav navBar={navBar}>
-        <CardContainer>
-          <Card>
-            <CardText>
-              <TextStyle>
-                <b style={{ fontSize: "0.88rem", color: "black" }}>Metacare</b>{" "}
-                <br /> adeyinka@metacare.app
-              </TextStyle>
-            </CardText>
-          </Card>
-        </CardContainer>
-        <NavList>
-          {MENU_DATA.map((item, index) => (
-            <Subnav item={item} key={index} />
-          ))}
-        </NavList>
-      </SideNav>
-      <SearchBar>
-        <Search name="search" type="text" placeholder="Ask us any question" />
-        <SearchIcon>
-          <img src={Iconsearch} alt="search-icon" />
-        </SearchIcon>
-      </SearchBar>
-      <HeaderAuth>
-        <Notification>
-          <img src={Notificationicon} alt="notification" />
-          <Badge>3</Badge>
-        </Notification>
-        <img src={Linedivider} alt="divider" />
-        <Authentication>
-          <UserImage />
-          <IconContainer>
-            <img src={Userdropdown} alt="dropdown" />
-          </IconContainer>
-        </Authentication>
-      </HeaderAuth>
-    </TopHeader>
+    <>
+      <TopHeader>
+        <Open onClick={() => setNavBar(!navBar)}>open</Open>
+        <SideNav navBar={navBar}>
+          <CardContainer>
+            <Card>
+              <CardText>
+                <TextStyle>
+                  <b style={{ fontSize: "0.88rem", color: "black" }}>
+                    Metacare
+                  </b>{" "}
+                  <br /> adeyinka@metacare.app
+                </TextStyle>
+              </CardText>
+            </Card>
+          </CardContainer>
+          <NavList>
+            {MENU_DATA.map((item, index) => (
+              <Subnav item={item} key={index} />
+            ))}
+          </NavList>
+        </SideNav>
+        <SearchBar>
+          <Search name="search" type="text" placeholder="Ask us any question" />
+          <SearchIcon>
+            <img src={Iconsearch} alt="search-icon" />
+          </SearchIcon>
+        </SearchBar>
+        <HeaderAuth>
+          <Notification>
+            <img src={Notificationicon} alt="notification" />
+            <Badge>3</Badge>
+          </Notification>
+          <img src={Linedivider} alt="divider" />
+          <Authentication>
+            <UserImage />
+            <IconContainer>
+              <img src={Userdropdown} alt="dropdown" />
+            </IconContainer>
+          </Authentication>
+        </HeaderAuth>
+      </TopHeader>
+    </>
   );
 };
 

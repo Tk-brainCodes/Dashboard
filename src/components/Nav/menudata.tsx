@@ -4,10 +4,17 @@ import Analytic from "../../assests/navicons/Analytic.svg";
 import Knowledgebase from "../../assests/navicons/Knowledgebase.svg";
 import Agentinbox from "../../assests/navicons/Agentinbox.svg";
 
+import AdminFilled from "../../assests/navfilled/Admin-filled.svg";
+import HelpCenterFilled from "../../assests/navfilled/HelpCenter-filled.svg";
+import AnalyticFilled from "../../assests/navfilled/Analytic-filled.svg";
+import KnowledgebaseFilled from "../../assests/navfilled/Knowledgebase-filled.svg";
+import AgentinboxFilled from "../../assests/navfilled/Agentinbox-filled.svg";
+
 export const MENU_DATA = [
   {
     name: "Admin",
     icon: Admin,
+    iconFilled: AdminFilled,
     url: "Admin",
 
     subNav: [
@@ -29,6 +36,7 @@ export const MENU_DATA = [
     name: "Knowledge Base",
     url: "knowledge",
     icon: Agentinbox,
+    iconFilled: AgentinboxFilled,
 
     subNav: [
       {
@@ -49,6 +57,7 @@ export const MENU_DATA = [
     name: "Train SAM",
     url: "train",
     icon: Agentinbox,
+    iconFilled: AgentinboxFilled,
 
     subNav: [
       {
@@ -68,6 +77,7 @@ export const MENU_DATA = [
   {
     name: "Agent Inbox",
     icon: Knowledgebase,
+    iconFilled: KnowledgebaseFilled,
     url: "agent",
 
     subNav: [
@@ -88,6 +98,7 @@ export const MENU_DATA = [
   {
     name: "Help Center",
     icon: HelpCenter,
+    iconFilled: HelpCenterFilled,
     url: "help",
 
     subNav: [
@@ -108,6 +119,7 @@ export const MENU_DATA = [
   {
     name: "Analytics",
     icon: Analytic,
+    iconFilled: AnalyticFilled,
 
     subNav: [
       {
