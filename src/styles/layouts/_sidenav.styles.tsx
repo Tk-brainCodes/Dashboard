@@ -87,6 +87,8 @@ export const UL = styled.ul`
 `;
 export const LI = styled.li`
   margin-left: 1.5em;
+  cursor: pointer;
+
 `;
 
 export const TopHeader = styled.div`
@@ -193,5 +195,4 @@ export const HeaderAuthContainer = styled.div`
   display: block;
   with: auto !important;
   height: auto !important;
-  // margin-top: 10em;
 `
