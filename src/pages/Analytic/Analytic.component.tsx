@@ -80,8 +80,8 @@ const Analytic: React.FC = () => {
                   </div>
                 )}
               </div>
+              <img className="divider" src={Linedivider} alt="divider" />
             </div>
-            <img src={Linedivider} alt="divider" />
             <button name="export" id="export-button">
               Export
             </button>

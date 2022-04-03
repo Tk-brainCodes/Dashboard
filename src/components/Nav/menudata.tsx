@@ -115,6 +115,10 @@ export const MENU_DATA = [
         url: "bases",
       },
       {
+        name: "Knowledge Base",
+        url: "knowledgebase",
+      },
+      {
         name: "Training SAM",
         url: "training",
       },

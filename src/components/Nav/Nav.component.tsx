@@ -3,7 +3,6 @@ import Userdropdown from "../../assests/sharedicons/userdropdown.svg";
 import Notificationicon from "../../assests/sharedicons/notification.svg";
 import Iconsearch from "../../assests/sharedicons/icon-search.svg";
 import Linedivider from "../../assests/sharedicons/Linedivider.svg";
-import "../../styles/layouts/_nav.styles.scss";
 import { MENU_DATA } from "./menudata";
 import Subnav from "./Subnav/subnav";
 import styled from "styled-components";
@@ -13,6 +12,16 @@ import {
   CardText,
   TextStyle,
   NavList,
+  TopHeader,
+  SearchBar,
+  SearchIcon,
+  Search,
+  HeaderAuth,
+  Notification,
+  Badge,
+  Authentication,
+  UserImage,
+  IconContainer,
 } from "../../styles/layouts/_sidenav.styles";
 
 const Open = styled.div`
@@ -43,7 +52,7 @@ const Nav: React.FC = () => {
   const [navBar, setNavBar] = useState<Boolean>(false);
 
   return (
-    <div className="top-header">
+    <TopHeader>
       <Open onClick={() => setNavBar(!navBar)}>open</Open>
       <SideNav navBar={navBar}>
         <CardContainer>
@@ -62,31 +71,26 @@ const Nav: React.FC = () => {
           ))}
         </NavList>
       </SideNav>
-      <div className="Search-bar">
-        <input
-          name="search"
-          type="text"
-          placeholder="Ask us any question"
-          id="search"
-        />
-        <div className="search-icon">
+      <SearchBar>
+        <Search name="search" type="text" placeholder="Ask us any question" />
+        <SearchIcon>
           <img src={Iconsearch} alt="search-icon" />
-        </div>
-      </div>
-      <div className="Header-Auth">
-        <div className="notification">
+        </SearchIcon>
+      </SearchBar>
+      <HeaderAuth>
+        <Notification>
           <img src={Notificationicon} alt="notification" />
-          <div className="badge">3</div>
-        </div>
+          <Badge>3</Badge>
+        </Notification>
         <img src={Linedivider} alt="divider" />
-        <div className="authentication">
-          <div className="user-image" />
-          <div className="icon-container">
+        <Authentication>
+          <UserImage />
+          <IconContainer>
             <img src={Userdropdown} alt="dropdown" />
-          </div>
-        </div>
-      </div>
-    </div>
+          </IconContainer>
+        </Authentication>
+      </HeaderAuth>
+    </TopHeader>
   );
 };
 

@@ -3,7 +3,7 @@ $breakpoint-tablet: 1024px;
 .Header {
   width: 82vw;
   height: 14.31em;
-  margin-left: 15.4em;
+  margin-left: 15em;
   position: fixed;
   z-index: 20;
   background-color: #ffff;
@@ -42,7 +42,7 @@ $breakpoint-tablet: 1024px;
     align-items: center;
     justify-content: space-between;
     margin-top: 30px;
-    margin-left: 2em;
+    margin-left: 2.5em;
 
     .Description-title {
       width: auto !important;
@@ -57,11 +57,16 @@ $breakpoint-tablet: 1024px;
       align-items: center;
       justify-content: space-between;
       flex-wrap: wrap;
-      width: 41.94em;
+      width: 40em;
       height: 2.75em;
+      margin-right: 1em;
+
+      .divider {
+        margin-left: 0.5em;
+      }
 
       .Description-field-content {
-        width: 33.8em;
+        width: 32.9em;
         height: 2.75;
         display: flex;
         align-items: center;
@@ -77,7 +82,7 @@ $breakpoint-tablet: 1024px;
         justify-content: space-around;
         border: 1px solid #e1e1eb;
         border-radius: 0.5em;
-        // margin: 2em 0em;
+        margin-right: 0.8em;
 
         #des-search {
           width: 1em;
